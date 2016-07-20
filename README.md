@@ -1,3 +1,5 @@
+(https://magic-deckbuilder.herokuapp.com)
+
 # Synopsis
 A MEAN stack app that queries Magic: The Gathering API (http://magicthegathering.io/), allows the user to add the cards to their own deck, and take their deck with them wherever they go.
 
@@ -50,7 +52,7 @@ It creates users in the DB and can put them in or pull their info for signup or 
 
 # Live Site Link
 
-TBA
+(https://magic-deckbuilder.herokuapp.com)
 
 #Installation Instructions
 N/A
