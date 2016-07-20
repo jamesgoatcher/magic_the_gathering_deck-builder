@@ -1,0 +1,18 @@
+<section id="login-section">
+	<div class="container">
+		<h1 id="login-heading">Log In</h1>
+		<form ng-submit="login.logIn()">
+			<input class="login-input" type="text" placeholder="Username" ng-model="login.form.userName">
+			<input class="login-input" type="password" placeholder="Password" ng-model="login.form.password">
+			<input id="login-button-signup" type="submit" value="LOG IN">
+		</form>
+
+		<!-- Bad Password message -->
+		<div class="block-center orange" ng-show="badPassword">
+			<br>
+			<p class="center font-large">INCORRECT PASSWORD.</p>
+			<p class="center">Please try again.</p>
+		</div>
+
+	</div>
+</section>

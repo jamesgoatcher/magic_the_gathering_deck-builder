@@ -1,0 +1,32 @@
+{
+  "name": "project-3",
+  "version": "1.0.0",
+  "description": "A MEAN stack app for Magic:The Gathering",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arcdeamonofire/project-3-MTG-MEANstack.git"
+  },
+  "keywords": [
+    "Magic",
+    "MTG",
+    "MEAN"
+  ],
+  "author": "James Goatcher and Samuel Weisse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arcdeamonofire/project-3-MTG-MEANstack/issues"
+  },
+  "homepage": "https://github.com/Arcdeamonofire/project-3-MTG-MEANstack#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "mongoose": "^4.5.4"
+  }
+}

@@ -1,0 +1,26 @@
+<section id="show-section">
+	<div class="container center">
+		
+		<!-- Card data will popular here -->
+		<div class="inline-block" id="show-div">
+			<img id="show-image" src="{{show.card.imageUrl}}">
+			<ul id="show-ul" class="left">
+				<li class="show-li"><span class="green">NAME</span>: {{show.card.name}}</li>
+				<li class="show-li"><span class="green">COLORS</span>: <span ng-repeat="color in show.card.colors">{{color}}<span ng-if="show.card.colors > 1">, </span></span></li>
+				<li class="show-li"><span class="green">MANA COST</span>: {{show.card.manaCost.length}}</li>
+				<li class="show-li"><span class="green">TYPE</span>: <span ng-repeat="type in show.card.types">{{type}}<span ng-if="show.card.subtypes > 1">, </span></span></li>
+				<li class="show-li"><span class="green">SUBTYPE</span>: <span ng-repeat="subtype in show.card.subtypes">{{subtype}}<span ng-if="show.card.subtypes > 1">, </span></span></li>
+				<li class="show-li"><span class="green">RARITY</span>: {{show.card.rarity}}</li>
+				<li class="show-li"><span class="green">SET</span>: {{show.card.set}}</li>
+				<li class="show-li"><span class="green">ARTIST</span>: {{show.card.artist}}</li>
+			</ul>
+		</div>
+
+		<br>
+		<div id="show-addbutton" ng-click="show.addCard()" ng-if="!show.fromDeck && !show.noUser">ADD TO DECK</div>
+		<a class="link" href="/search/{{show.card.colors[0]}}" ng-if="!show.fromDeck"><p id="show-return">Return to Search Results</p></a>
+		<a class="link" href="/search/{{show.card.colors[0]}}" ng-if="show.fromDeck"><p id="show-return">Find More {{show.card.colors[0]}} cards</p></a>
+
+		<!--  -->
+	</div>
+</section>

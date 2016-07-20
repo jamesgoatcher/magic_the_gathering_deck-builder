@@ -1,0 +1,25 @@
+<section id="search-section">
+	<div class="container center">
+		<h1 id="search-heading">SEARCH</h1>
+		<h2 id="search-subheading">by color</h2>
+		<br>
+		<!-- glyphicons to seach by color -->
+		<span id="glyph-white" class="glyphicon-class" ng-click="search.find('white')"></span>
+		<span id="glyph-green" class="glyphicon-class" ng-click="search.find('green')"></span>
+		<span id="glyph-red" class="glyphicon-class" ng-click="search.find('red')"></span>
+		<span id="glyph-blue" class="glyphicon-class" ng-click="search.find('blue')"></span>
+		<span id="glyph-black" class="glyphicon-class" ng-click="search.find('black')"></span>
+
+		<div>
+			<!-- cards will populate here -->
+			<a 
+				href="/show/{{card.id}}/{{card.colors[0]}}" 
+				ng-repeat="card in search.cards | limitTo:limit"
+			>
+					<img class="thumbnails" src="{{card.imageUrl}}" ng-if="card.imageUrl">
+			</a>
+			<!-- will add 15 more cards with each click -->
+			<button ng-show="search.searched" id="search-button" ng-click="limit = limit + 15">Load More</button>
+		</div>
+	</div>
+</section>

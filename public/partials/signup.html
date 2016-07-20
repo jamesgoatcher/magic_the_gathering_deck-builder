@@ -1,0 +1,27 @@
+<section id="signup-section">
+	<div class="container">
+		<h1 id="signup-heading">SIGN UP</h1>
+		<form id="signup-form" ng-submit="submit.signUp()">
+			<input class="signup-input" type="text" placeholder="First Name" ng-model="submit.form.firstName">
+			<input class="signup-input" type="text" placeholder="Last Name" ng-model="submit.form.lastName">
+			<div id="signup-input-gender" class="center">
+				Male: <input type="radio" ng-model="submit.form.gender" value="male">
+				Female: <input type="radio" ng-model="submit.form.gender" value="female">
+				Decline to State: <input type="radio" ng-model="submit.form.gender" value="pat">
+			</div>
+			<input class="signup-input" type="text" placeholder="Username" ng-model="submit.form.userName">
+			<input class="signup-input" type="password" placeholder="Password" ng-model="submit.form.password">
+			<input id="signup-button-signup" type="submit" value="REGISTER">
+		</form><br>
+		<h2 class="signup-subheading"><span>Already registered?</span></h2>
+		<a class="link" href="/login"><div id="signup-button-login">LOG IN</div></a>
+
+		<!-- Bad Username message -->
+		<div class="block-center orange" ng-show="badPassword">
+			<br>
+			<p class="center font-large">USERNAME ALREADY TAKEN.</p>
+			<p class="center">May I suggest you try <span class="white">{{index.randomName()}}</span>?</p>
+		</div>
+
+	</div>
+</section>

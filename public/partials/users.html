@@ -1,0 +1,30 @@
+<section id="users-section">
+	<div class="container">
+
+		<div class="inline-block">
+			<div id="users-edit-div">
+				<img id="users-img" src="{{index.userImage}}">
+				<a class="users-edit-text block-center link" href="#">Edit User Info</a>
+			</div>
+		</div>
+		<div id="users-heading-div">
+			<h1 class="inline-block" id="users-heading">Welcome, <span class="orange uppercase">{{user.firstName}}!</span></h1>
+		</div>
+
+		<br>
+		<h2 id="users-deck-subheading"><span class="orange">{{user.firstName}}'s</span> Deck</h2>
+		<br>
+		<div id="users-deck-div-hidden" ng-hide="deckEmpty">Empty</div>
+
+		<!-- cards will populate here. -->
+		<div class="users-deck-div">
+			<a 
+				href="/show/{{card.id}}/{{card.colors[0]}}" 
+				ng-repeat="card in index.user.deck"
+			>
+					<img class="thumbnails" src="{{card.imageUrl}}" ng-if="card.imageUrl">
+			</a>
+		</div>
+
+	</div>
+</section>
